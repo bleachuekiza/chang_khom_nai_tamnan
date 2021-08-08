@@ -4,6 +4,7 @@ from time import sleep
 from data import *
 
 run1 = True
+coder = 'Program by Zachtix (Atthwut Smith)'
 
 def mainmenu():
     while True:
@@ -13,6 +14,7 @@ def mainmenu():
             print('[{:2}] {:20}[{:^13}]'.format(i+1, data_prog[i]['nameprog'], data_prog[i]['Status']))
         print('[i] {:15}'.format('install program'))
         print('[x] {:15}'.format('exit program'))
+        print(coder)
         choibeinput = input('Choose Program : ')
         
         if choibeinput == 'i':
@@ -38,6 +40,7 @@ def install_pros():
         # print(cmdcode+' -y')
         os.system(cmdcode+' -y')
         print("install sucess")
+        print(coder)
         sleep(3)
         exit()
 
@@ -50,9 +53,23 @@ def is_admin():
 def install_choco():
     x = 'powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(\'https://community.chocolatey.org/install.ps1\'))'
     os.system(x)
-    mainmenu()
+    os.system('cls')
+    print(coder)
+    sleep(1)
+    print('\ninstall chocolatey sucess')
+    print('\n\nPls open program again')
+    sleep(1)
+    print('Close program . . .')
+    print('\n3 . . .')
+    sleep(1)
+    print('\n2 . .')
+    sleep(1)
+    print('\n1 .')
+    sleep(2)
+    exit()
 
 if __name__ == "__main__":
+    print(coder)
     if is_admin():
         print("Run as Admin success")
         try:

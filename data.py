@@ -35,11 +35,6 @@ data_prog = [
         'code': ' zoom'
     },
     {
-        'nameprog':'Office 365 Business' , 
-        'Status':'non-Prepare' , 
-        'code': ' office365business'
-    },
-    {
         'nameprog':'VSCode' , 
         'Status':'non-Prepare' , 
         'code': ' vscode'
